@@ -29,5 +29,6 @@ RUN apt-get install software-properties-common -y && \
 RUN apt-get install maven git -y
 
 RUN mkdir -p /.kube && chown -R 1000:1000 /.kube
+RUN mkdir -p /.docker && chown -R 1000:1000 /.docker
 
 RUN gcloud --version
