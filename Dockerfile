@@ -28,4 +28,6 @@ RUN apt-get install software-properties-common -y && \
 
 RUN apt-get install maven git -y
 
+RUN mkdir -p /.kube && chmod -R 0755 /.kube
+
 RUN gcloud --version
