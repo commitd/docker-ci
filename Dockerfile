@@ -26,7 +26,7 @@ RUN apt-get install software-properties-common -y && \
     apt-add-repository --yes --update ppa:ansible/ansible && \
     apt-get install ansible -y
 
-RUN apt-get install maven git -y
+RUN apt-get install maven git zip -y
 
 RUN mkdir -p /.kube && chown -R 1000:1000 /.kube
 RUN mkdir -p /.docker && chown -R 1000:1000 /.docker
