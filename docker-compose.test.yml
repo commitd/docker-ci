@@ -1,3 +1,5 @@
 sut:
   build: .
-  command: ci_tests.sh
+  volumes:
+    - .:/test
+  command: ./test/ci_tests.sh
