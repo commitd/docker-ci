@@ -1,6 +1,6 @@
 # committed/ci
 
-[![Docker Build Status](https://img.shields.io/docker/build/committed/ci?style=flat-square)](https://cloud.docker.com/u/committed/repository/docker/committed/ci/builds)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/committed/ci?style=flat-square)](https://cloud.docker.com/u/committed/repository/docker/committed/ci/builds)
 [![Docker Pulls](https://img.shields.io/docker/pulls/committed/ci?style=flat-square)](https://hub.docker.com/r/committed/ci)
 
 A docker image for use in CI builds. It is setup for the technologies and stack that are most commonly used in Committed projects, but may be useful to others for use or reference.
@@ -30,16 +30,13 @@ The build tools included are:
 
 ## Use
 
-The simplest use in a drone pipeline is shown below, you just have to provide secrets for the SonarQube host (`sonar-host`) and login token (`sonar-token`).
+The simplest use in a drone pipeline is shown below, you just have to provide the build commands, here shown as `build.sh`, but `java`, `mvn`, `node` and `yarn` commands can be used. In addition, deploy steps using `gcloud`, `kubectl` and `ansible`.
 
 ```yaml
-- name: code-analysis
-  image: committed/drone-sonarqube-node
-  settings:
-    host:
-      from_secret: sonar_host
-    token:
-      from_secret: sonar_token
+- name: build
+  image: committed/ci
+  commands:
+    - build.sh
 ```
 
 ## Development
@@ -58,7 +55,7 @@ To test the docker image run the docker image with appropriate command e.g.:
 docker run --rm  committed/ci java --version
 ```
 
-A test file `./test.sh` uses the version commands of each tool to check it is installed.
+A test file `./test.sh` uses the version commands of each tool to check it is installed. The tests (`ci_tests.sh`) are run on dockerhub with and `docker-compose.test.yml`.
 
 ## Credits
 
