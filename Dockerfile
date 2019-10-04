@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -qq \
     gnupg \
     apache2-utils \
     tar \
+    zip \
     wget \
     git \
     build-essential
