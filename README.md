@@ -1,6 +1,6 @@
 # committed/ci
 
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/committed/ci?style=flat-square)](https://cloud.docker.com/u/committed/repository/docker/committed/ci/builds)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/committed/ci?style=flat-square)](https://hub.docker.com/r/committed/ci)
 [![Docker Pulls](https://img.shields.io/docker/pulls/committed/ci?style=flat-square)](https://hub.docker.com/r/committed/ci)
 
 A docker image for use in CI builds. It is setup for the technologies and stack that are most commonly used in Committed projects, but may be useful to others for use or reference.
@@ -13,6 +13,7 @@ The following general libs and utilities are installed:
 - gnupg
 - apache2-utils
 - tar
+- zip
 - wget
 - git
 - build-essential
