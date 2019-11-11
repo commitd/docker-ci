@@ -75,6 +75,7 @@ Licenses for the products installed within the images:
 - Yarn: [BSD](https://github.com/yarnpkg/yarn/blob/master/LICENSE)
 - GCloud/Kubectl: Apache License, Version 2.0. and [GCloud Terms](https://cloud.google.com/terms/)
 - Ansible: [GPL v3.0](https://github.com/ansible/ansible/blob/devel/COPYING)
+- Google Chrome [EULA](https://www.google.com/intl/en_sg/chrome/privacy/eula_text.html)
 
 As with all Docker images, other software is likely to be included, which might be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
