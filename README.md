@@ -28,6 +28,7 @@ The build tools included are:
 - **GCloud** 265
 - **Kubectl** 2019.09.27
 - **Ansible** 2.8.5
+- **Chrome** 80.0.3962.2 dev
 
 ## Use
 
