@@ -29,6 +29,7 @@ The build tools included are:
 - **Kubectl** 2019.09.27
 - **Ansible** 2.8.5
 - **Chrome** 80.0.3962.2 dev
+- **Anaconda3** 5.3.0
 
 ## Use
 
@@ -76,6 +77,7 @@ Licenses for the products installed within the images:
 - GCloud/Kubectl: Apache License, Version 2.0. and [GCloud Terms](https://cloud.google.com/terms/)
 - Ansible: [GPL v3.0](https://github.com/ansible/ansible/blob/devel/COPYING)
 - Google Chrome [EULA](https://www.google.com/intl/en_sg/chrome/privacy/eula_text.html)
+- Anaconda [EULA](https://docs.anaconda.com/anaconda/eula/)
 
 As with all Docker images, other software is likely to be included, which might be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
