@@ -8,3 +8,5 @@ docker run --rm committed/ci gcloud --version
 echo "Helm version $(docker run --rm committed/ci helm version -c --short)"
 docker run --rm committed/ci ansible --version
 docker run --rm committed/ci google-chrome --version
+docker run --rm committed/ci conda --version
+docker run --rm committed/ci python -V
