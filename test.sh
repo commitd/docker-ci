@@ -10,3 +10,4 @@ docker run --rm committed/ci ansible --version
 docker run --rm committed/ci google-chrome --version
 docker run --rm committed/ci conda --version
 docker run --rm committed/ci python -V
+docker run --rm committed/ci docker --version
