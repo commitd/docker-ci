@@ -30,6 +30,7 @@ The build tools included are:
 - **Ansible** 2.8.5
 - **Chrome** 80.0.3962.2 dev
 - **Anaconda3** 5.3.0
+- **Docker CLI** 19.03.7
 
 ## Use
 
@@ -40,6 +41,25 @@ The simplest use in a drone pipeline is shown below, you just have to provide th
   image: committed/ci
   commands:
     - build.sh
+```
+
+To use docker, connect to the Docker daemon on the host machine by mounting the Docker socket as a volume:
+
+```yaml
+- name: build
+  image: committed/ci
+  commands:
+    - docker ps
+  volumes:
+    - name: docker_sock
+      path: /var/run/docker.sock
+
+...
+
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
 ```
 
 ## Development
