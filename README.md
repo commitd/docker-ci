@@ -21,16 +21,18 @@ The following general libs and utilities are installed:
 The build tools included are:
 
 - **Java** openjdk 11.0.2 2019-01-15
-- **Maven** v3.6.0
+- **Maven** Latest
 - **Node** v10.16.3
-- **Yarn** 1.19.0
+- **Yarn** Latest
 - **Helm** v2.9.1
-- **GCloud** 265
-- **Kubectl** 2019.09.27
-- **Ansible** 2.8.5
-- **Chrome** 80.0.3962.2 dev
+- **GCloud** Latest
+- **Kubectl** Latest
+- **Ansible** Latest
+- **Chrome** Latest
 - **Anaconda3** 5.3.0
 - **Docker CLI** 19.03.7
+- **Docker Compose** 1.25.4
+- **AWS CLI** Latest
 
 ## Use
 
