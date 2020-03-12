@@ -20,19 +20,37 @@ The following general libs and utilities are installed:
 
 The build tools included are:
 
-- **Java** openjdk 13 2019-09-17
-- **Maven**
-- **Node** v10.16.3
-- **Yarn**
-- **Helm** v2.9.1
-- **GCloud**
-- **Kubectl**
-- **Ansible**
-- **Chrome**
-- **Anaconda3** 5.3.0
-- **Docker CLI** 19.03.7
-- **Docker Compose** 1.25.4
-- **AWS CLI**
+```
+openjdk 13 2019-09-17
+OpenJDK Runtime Environment AdoptOpenJDK (build 13+33)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 13+33, mixed mode, sharing)
+Apache Maven 3.6.0
+Maven home: /usr/share/maven
+Java version: 13, vendor: AdoptOpenJDK, runtime: /opt/java/openjdk
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.15.0-74-generic", arch: "amd64", family: "unix"
+v12.16.1
+Yarn version 1.22.4
+Google Cloud SDK 284.0.0
+alpha 2020.03.06
+beta 2020.03.06
+bq 2.0.54
+core 2020.03.06
+gsutil 4.48
+kubectl 2020.03.06
+Helm version Client: v2.9.1+g20adb27
+ansible 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.17 (default, Nov  7 2019, 10:07:09) [GCC 7.4.0]
+Google Chrome 82.0.4083.0 dev
+conda 4.5.11
+Python 3.7.0
+Docker version 19.03.7, build 7141c199a2
+docker-compose version 1.25.4, build 8d51620a
+```
 
 ## Use
 

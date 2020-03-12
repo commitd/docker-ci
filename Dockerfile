@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk13:ubuntu
+FROM adoptopenjdk/openjdk13:openjdk13:jdk-13_33-ubuntu
 LABEL maintainer="Committed Software <docker@committed.software>"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
