@@ -3,7 +3,6 @@ LABEL maintainer="Committed Software <docker@committed.software>"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ENV MAVEN_VERSION 3.3.9
 ENV NODE_VERSION 10
 ENV HELM_VERSION 2.9.1
 ENV DOCKER_VERSION=19.03.7
