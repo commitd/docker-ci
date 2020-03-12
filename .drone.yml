@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: committed-ci:1.4.0
+name: committed-ci
 
 volumes:
   - name: docker_sock
