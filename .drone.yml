@@ -9,17 +9,10 @@ volumes:
       path: /var/run/docker.sock
 
 steps:
-  - name: build
+  - name: build-and-test
     image: committed/ci
     commands:
       - ./build.sh
-    volumes:
-      - name: docker_sock
-        path: /var/run/docker.sock
-    
-  - name: test
-    image: committed/ci
-    commands:
       - ./test.sh
     volumes:
       - name: docker_sock
