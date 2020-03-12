@@ -100,6 +100,8 @@ Licenses for the products installed within the images:
 - Ansible: [GPL v3.0](https://github.com/ansible/ansible/blob/devel/COPYING)
 - Google Chrome [EULA](https://www.google.com/intl/en_sg/chrome/privacy/eula_text.html)
 - Anaconda [EULA](https://docs.anaconda.com/anaconda/eula/)
+- Docker [Apache License, Version 2.0.](https://github.com/docker/docker/blob/master/LICENSE)
+- AWS [Apache License, Version 2.0.](https://github.com/aws/aws-cli/blob/develop/LICENSE.txt) 
 
 As with all Docker images, other software is likely to be included, which might be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
