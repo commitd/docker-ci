@@ -7,6 +7,7 @@ ENV MAVEN_VERSION 3.3.9
 ENV NODE_VERSION 10
 ENV HELM_VERSION 2.9.1
 ENV DOCKER_VERSION=19.03.7
+ENV DOCKER_COMPOSE_VERSION=1.25.4
 ENV CLOUD_SDK_REPO cloud-sdk-cosmic
 ENV PATH /opt/conda/bin:$PATH
 
@@ -80,6 +81,16 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.
 RUN wget --quiet https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz && \
     tar -xzvf docker-${DOCKER_VERSION}.tgz --strip 1 -C /usr/local/bin docker/docker && \
     rm docker-${DOCKER_VERSION}.tgz
+
+# Docker-compose
+RUN curl -s -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+    chmod +x /usr/local/bin/docker-compose
+
+# AWS
+RUN curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip -q awscliv2.zip && \
+    ./aws/install && \
+    rm awscliv2.zip
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
