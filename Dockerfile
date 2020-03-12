@@ -3,7 +3,7 @@ LABEL maintainer="Committed Software <docker@committed.software>"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ENV NODE_VERSION 10
+ENV NODE_VERSION 12
 ENV HELM_VERSION 2.9.1
 ENV ANACONDA3_VERSION 5.3.0
 ENV DOCKER_VERSION=19.03.7
