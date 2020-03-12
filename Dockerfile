@@ -1,12 +1,13 @@
-FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jdk-11.0.2.9
+FROM adoptopenjdk/openjdk13:jdk-13_33-ubuntu
 LABEL maintainer="Committed Software <docker@committed.software>"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ENV MAVEN_VERSION 3.3.9
-ENV NODE_VERSION 10
+ENV NODE_VERSION 12
 ENV HELM_VERSION 2.9.1
+ENV ANACONDA3_VERSION 5.3.0
 ENV DOCKER_VERSION=19.03.7
+ENV DOCKER_COMPOSE_VERSION=1.25.4
 ENV CLOUD_SDK_REPO cloud-sdk-cosmic
 ENV PATH /opt/conda/bin:$PATH
 
@@ -69,7 +70,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     && rm -rf /var/lib/apt/lists/*
 
 # Anaconda
-RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && \
+RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-${ANACONDA3_VERSION}-Linux-x86_64.sh -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
     rm ~/anaconda.sh && \
     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
@@ -81,5 +82,18 @@ RUN wget --quiet https://download.docker.com/linux/static/stable/x86_64/docker-$
     tar -xzvf docker-${DOCKER_VERSION}.tgz --strip 1 -C /usr/local/bin docker/docker && \
     rm docker-${DOCKER_VERSION}.tgz
 
+# Docker-compose
+RUN curl -s -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+    chmod +x /usr/local/bin/docker-compose
+
+# AWS
+RUN curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip -q awscliv2.zip && \
+    ./aws/install && \
+    rm awscliv2.zip
+
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY ci_tests.sh /ci_tests.sh
+RUN ["chmod", "+x", "/ci_tests.sh"]

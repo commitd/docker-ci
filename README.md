@@ -20,17 +20,37 @@ The following general libs and utilities are installed:
 
 The build tools included are:
 
-- **Java** openjdk 11.0.2 2019-01-15
-- **Maven** v3.6.0
-- **Node** v10.16.3
-- **Yarn** 1.19.0
-- **Helm** v2.9.1
-- **GCloud** 265
-- **Kubectl** 2019.09.27
-- **Ansible** 2.8.5
-- **Chrome** 80.0.3962.2 dev
-- **Anaconda3** 5.3.0
-- **Docker CLI** 19.03.7
+```
+openjdk 13 2019-09-17
+OpenJDK Runtime Environment AdoptOpenJDK (build 13+33)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 13+33, mixed mode, sharing)
+Apache Maven 3.6.0
+Maven home: /usr/share/maven
+Java version: 13, vendor: AdoptOpenJDK, runtime: /opt/java/openjdk
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.15.0-74-generic", arch: "amd64", family: "unix"
+v12.16.1
+Yarn version 1.22.4
+Google Cloud SDK 284.0.0
+alpha 2020.03.06
+beta 2020.03.06
+bq 2.0.54
+core 2020.03.06
+gsutil 4.48
+kubectl 2020.03.06
+Helm version Client: v2.9.1+g20adb27
+ansible 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.17 (default, Nov  7 2019, 10:07:09) [GCC 7.4.0]
+Google Chrome 82.0.4083.0 dev
+conda 4.5.11
+Python 3.7.0
+Docker version 19.03.7, build 7141c199a2
+docker-compose version 1.25.4, build 8d51620a
+```
 
 ## Use
 
@@ -98,6 +118,8 @@ Licenses for the products installed within the images:
 - Ansible: [GPL v3.0](https://github.com/ansible/ansible/blob/devel/COPYING)
 - Google Chrome [EULA](https://www.google.com/intl/en_sg/chrome/privacy/eula_text.html)
 - Anaconda [EULA](https://docs.anaconda.com/anaconda/eula/)
+- Docker [Apache License, Version 2.0.](https://github.com/docker/docker/blob/master/LICENSE)
+- AWS [Apache License, Version 2.0.](https://github.com/aws/aws-cli/blob/develop/LICENSE.txt) 
 
 As with all Docker images, other software is likely to be included, which might be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 

@@ -1,0 +1,19 @@
+---
+kind: pipeline
+type: docker
+name: committed-ci
+
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
+
+steps:
+  - name: build-and-test
+    image: committed/ci
+    commands:
+      - docker build -t committed/ci:ci .
+      - docker run --rm committed/ci:ci /ci_tests.sh
+    volumes:
+      - name: docker_sock
+        path: /var/run/docker.sock
