@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jdk-11.0.2.9
+FROM adoptopenjdk/openjdk13:ubuntu
 LABEL maintainer="Committed Software <docker@committed.software>"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -94,3 +94,6 @@ RUN curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscl
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY ci_tests.sh /ci_tests.sh
+RUN ["chmod", "+x", "/ci_tests.sh"]

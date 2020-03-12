@@ -20,7 +20,7 @@ The following general libs and utilities are installed:
 
 The build tools included are:
 
-- **Java** openjdk 11.0.2 2019-01-15
+- **Java** openjdk 13 2019-09-17
 - **Maven** Latest
 - **Node** v10.16.3
 - **Yarn** Latest

@@ -12,8 +12,9 @@ steps:
   - name: build-and-test
     image: committed/ci
     commands:
-      - ./build.sh
-      - ./test.sh
+      - docker build -t committed/ci:ci .
+      - docker run --rm committed/ci:ci /ci_tests.sh
+      - docker image rm committed/ci:ci
     volumes:
       - name: docker_sock
         path: /var/run/docker.sock
