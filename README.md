@@ -21,35 +21,36 @@ The following general libs and utilities are installed:
 The build tools included are:
 
 ```
-openjdk 13 2019-09-17
-OpenJDK Runtime Environment AdoptOpenJDK (build 13+33)
-OpenJDK 64-Bit Server VM AdoptOpenJDK (build 13+33, mixed mode, sharing)
+openjdk 14.0.1 2020-04-14
+OpenJDK Runtime Environment AdoptOpenJDK (build 14.0.1+7)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 14.0.1+7, mixed mode, sharing)
 Apache Maven 3.6.0
 Maven home: /usr/share/maven
-Java version: 13, vendor: AdoptOpenJDK, runtime: /opt/java/openjdk
+Java version: 14.0.1, vendor: AdoptOpenJDK, runtime: /opt/java/openjdk
 Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "4.15.0-74-generic", arch: "amd64", family: "unix"
-v12.16.1
+OS name: "linux", version: "4.19.76-linuxkit", arch: "amd64", family: "unix"
+Node version v12.18.2
 Yarn version 1.22.4
-Google Cloud SDK 284.0.0
-alpha 2020.03.06
-beta 2020.03.06
-bq 2.0.54
-core 2020.03.06
-gsutil 4.48
-kubectl 2020.03.06
+Google Cloud SDK 300.0.0
+alpha 2020.07.06
+beta 2020.07.06
+bq 2.0.58
+core 2020.07.06
+gsutil 4.51
+kubectl 1.15.11
 Helm version Client: v2.9.1+g20adb27
-ansible 2.9.6
+ansible 2.9.10
   config file = /etc/ansible/ansible.cfg
   configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/lib/python2.7/dist-packages/ansible
   executable location = /usr/bin/ansible
-  python version = 2.7.17 (default, Nov  7 2019, 10:07:09) [GCC 7.4.0]
-Google Chrome 82.0.4083.0 dev
+  python version = 2.7.17 (default, Apr 15 2020, 17:20:14) [GCC 7.5.0]
+Google Chrome 85.0.4183.15 dev
 conda 4.5.11
 Python 3.7.0
 Docker version 19.03.7, build 7141c199a2
 docker-compose version 1.25.4, build 8d51620a
+aws-cli/2.0.30 Python/3.7.3 Linux/4.19.76-linuxkit botocore/2.0.0dev34
 ```
 
 ## Use
@@ -102,7 +103,7 @@ A test file `./test.sh` uses the version commands of each tool to check it is in
 
 ## Credits
 
-This is based on the original openjdk image by [adoptopenjdk](https://hub.docker.com/r/adoptopenjdk/openjdk11).
+This is based on the original openjdk image by [adoptopenjdk](https://hub.docker.com/r/adoptopenjdk).
 
 ## License
 
